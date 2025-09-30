@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-section">
+    <div class="container">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p class="section-subtitle">I am a passionate full-stack developer with  6 months of experience building web applications. I specialize in Python, Flask, JavaScript, and modern web technologies. I love creating clean, efficient code and solving complex problems.</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>{{ data.about }}</p>
+                
+                <div class="personal-info">
+                    <h3>Personal Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Email:</strong> {{ santoshram14333@gmail.com }}
+                        </div>
+                        <div class="info-item">
+                            <strong>Phone:</strong> {{ 9390023059 }}
+                        </div>
+                        <div class="info-item">
+                            <strong>Location:</strong> hyderbad, india
+                        </div>
+                        <div class="info-item">
+                            <strong>Freelance:</strong> Available
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                {% 'Python', 'Flask', 'HTML/CSS', 'JavaScript', 'SQL', 'Git', 'Bootstrap', 'REST APIs %}
+                <div class="skill-card">
+                    <i class="fas fa-check"></i>
+                    <span>{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

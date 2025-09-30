@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-section">
+    <div class="container">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p class="section-subtitle">Get to know more about my journey and skills</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>{{ data.about }}</p>
+                
+                <div class="personal-info">
+                    <h3>Personal Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Email:</strong> {{ data.contact.email }}
+                        </div>
+                        <div class="info-item">
+                            <strong>Phone:</strong> {{ data.contact.phone }}
+                        </div>
+                        <div class="info-item">
+                            <strong>Location:</strong> City, Country
+                        </div>
+                        <div class="info-item">
+                            <strong>Freelance:</strong> Available
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                {% for skill in data.skills %}
+                <div class="skill-card">
+                    <i class="fas fa-check"></i>
+                    <span>{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
